@@ -34,7 +34,7 @@ const FilterBtns = props => {
     <div>
       <Grid container spacing={0.5}>
         <Grid item xs></Grid>
-        <Grid item xs={4}>
+        <Grid item xs={5}>
           <Button
             onClick={task_completed}
             classes={{
@@ -45,7 +45,7 @@ const FilterBtns = props => {
           </Button>
         </Grid>
 
-        <Grid item xs={4}>
+        <Grid item xs={5}>
           <Button
             classes={{
               root: classes.root

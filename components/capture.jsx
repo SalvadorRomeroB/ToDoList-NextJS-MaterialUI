@@ -28,7 +28,7 @@ const useStyles = makeStyles({
     color: "white"
   },
   root: {
-    width: 250,
+    width: 180,
     "&$cssFocused $notchedOutline": {
       borderColor: "#66FCF1"
     },
