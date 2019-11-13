@@ -23,7 +23,6 @@ const Task = props => {
   return (
     <div className={props.hidden ? "hide" : "task"}>
       <Paper className={classes.root}>
-        {/* <input type="checkbox" value={props.completed} onChange={toggle} /> */}
         <Checkbox
           value={props.completed}
           labelStyle={{ color: "#0B0C10" }}
