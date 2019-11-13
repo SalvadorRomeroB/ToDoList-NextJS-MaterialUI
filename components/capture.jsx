@@ -28,6 +28,7 @@ const useStyles = makeStyles({
     color: "white"
   },
   root: {
+    width: 250,
     "&$cssFocused $notchedOutline": {
       borderColor: "#66FCF1"
     },
@@ -44,15 +45,18 @@ const Capture = props => {
   const [text, setText] = useState("");
 
   const addTask = () => {
-    let task = {
-      type: "ADD_TASK",
-      payload: {
-        message: text,
-        completed: false,
-        hidden: false
-      }
-    };
-    props.dispatch(task);
+    if (text != "") {
+      let task = {
+        type: "ADD_TASK",
+        payload: {
+          message: text,
+          completed: false,
+          hidden: false
+        }
+      };
+      props.dispatch(task);
+      setText("");
+    }
   };
 
   return (
@@ -72,6 +76,10 @@ const Capture = props => {
                 focused: classes.cssFocused,
                 root: classes.root
               }
+            }}
+            value={text}
+            onKeyPress={e => {
+              if (e.key === "Enter") addTask();
             }}
           />
         </Grid>
